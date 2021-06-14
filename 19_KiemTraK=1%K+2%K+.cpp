@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+typedef long long ll;
 
-bool z(long long n, long long k)
+bool laucher(ll n, ll k)
 {
-	long long res = 0;
+	ll res = 0;
 	for (int i = 1; i <= n; i++)
 	{
 		res += (i % k);
@@ -18,8 +18,8 @@ int main()
 	cin >> t;
 	while (t--)
 	{
-		long long n, k;
+		ll n, k;
 		cin >> n >> k;
-		cout << z(n, k) << endl;
+		cout << laucher(n, k) << endl;
 	}
 }
