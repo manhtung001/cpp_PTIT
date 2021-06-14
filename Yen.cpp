@@ -1,46 +1,32 @@
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h>
 
-bool nto(int a)
-{
-    for (long long i = 2; i * i <= a; i++)
-    {
-        if (a % i == 0)
-        {
-            return false;
-        };
-    };
-    return true;
-}
+using namespace std;
 
 int main()
 {
-    int n;
-    do
+    long long n;
+    cin >> n;
+    long long k = n;
+    for (long long i = 2; i <= sqrt(k); i++)
     {
-        cin >> n;
-    } while (n <= 0 && n >= 10);
-
-    int a[n + 5];
-    string res = "";
-
-    for (int i = 0; i < n; i++)
+        if (k % i == 0)
+        {
+            cout << i << " ";
+        }
+        long long dem = 0;
+        while (k % i == 0)
+        {
+            dem++;
+            k /= i;
+        }
+        if (dem > 0)
+        {
+            cout << dem << endl;
+        }
+    }
+    if (k > 1)
     {
-        cin >> a[i];
-        if ( a[i] > 2 && nto(a[i]))
-        {
-            res += "T";
-        }
-        else if (a[i] > 0)
-        {
-            res += "K";
-        }
-        else
-        {
-            res += "A";
-        };
-    };
-    cout << res;
-
+        cout << k << " " << 1;
+    }
     return 0;
 }
