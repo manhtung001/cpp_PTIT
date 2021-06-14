@@ -1,19 +1,20 @@
-#include <iostream>
-#include <math.h>
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
 
 using namespace std;
 
-bool check[1007];
+bool check[1000005];
 
 void lauc()
 {
-	for (long i = 2; i <= 1007; i++)
+	for (ll i = 2; i <= 1000005; i++)
 		check[i] = true;
-	for (long i = 2; i <= 1007; i++)
+	for (ll i = 2; i <= 1000005; i++)
 	{
 		if (check[i] == true)
 		{
-			for (long j = i * i; j <= 1007; j += i)
+			for (ll j = i * i; j <= 1000005; j += i)
 			{
 				check[j] = false;
 			}
@@ -28,10 +29,9 @@ int main()
 	cin >> t;
 	while (t--)
 	{
-		long n;
+		ll n;
 		cin >> n;
-		long max = (long)sqrt(n);
-		for (long i = 2; i <= max; i++)
+		for (ll i = 2; i <= sqrt(n); i++)
 		{
 			if (check[i] == true)
 			{

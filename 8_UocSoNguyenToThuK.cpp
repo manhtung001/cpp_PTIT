@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+typedef long long ll;
 
 int main()
 {
@@ -8,25 +8,24 @@ int main()
 	cin >> t;
 	while (t--)
 	{
-		int n, a;
-		cin >> n >> a;
-		if (a > n)
+		ll n, k;
+		cin >> n >> k;
+		if (k > n)
 		{
 			cout << -1 << endl;
 			continue;
 		}
-		a -= 1;
-		int arr[n + 1], index = 0;
+		k -= 1;
+		ll arr[n + 1], index = 0;
 		memset(arr, 0, sizeof(arr));
-		for (int i = 2; i <= n; i++)
+		for (ll i = 2; i <= n; i++)
 		{
 			while (n % i == 0)
 			{
-				arr[index] = i;
-				index++;
+				arr[index++] = i;
 				n /= i;
 			}
 		}
-		cout << (arr[a] > 0 ? arr[a] : -1) << endl;
+		cout << (arr[k] > 0 ? arr[k] : -1) << endl;
 	}
 }

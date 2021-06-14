@@ -1,12 +1,13 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 
-void run(long long n)
+void run(ll n)
 {
-    long long a[10000] = {0};
-    long long dem = 0;
-    long long tmp = n;
-    for (long long i = 2; i * i <= n; i++)
+    ll a[10000] = {0};
+    ll dem = 0;
+    ll tmp = n;
+    for (ll i = 2; i * i <= n; i++)
     {
         if (tmp % i == 0)
         {
@@ -33,7 +34,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        long long n;
+        ll n;
         cin >> n;
         run(n);
         cout << endl;
