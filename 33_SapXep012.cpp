@@ -2,23 +2,29 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
 	int t;
 	cin >> t;
-	while (t--){
+	while (t--)
+	{
 		long n;
 		cin >> n;
-		string a ="", b = "", c = "";
-		for (int i = 0; i < n; i++){
+		string a = "", b = "", c = "";
+		for (int i = 0; i < n; i++)
+		{
 			long k;
 			cin >> k;
-			if (k == 0){
+			if (k == 0)
+			{
 				a += "0 ";
 			}
-			else if (k == 1){
+			else if (k == 1)
+			{
 				b += "1 ";
 			}
-			else{
+			else
+			{
 				c += "2 ";
 			}
 		}

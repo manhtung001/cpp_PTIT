@@ -2,38 +2,40 @@
 using namespace std;
 typedef long long ll;
 
-// test tren win
-
 int main()
 {
     int t;
     cin >> t;
-    long long k = 1000000007;
     while (t--)
     {
         ll n;
         cin >> n;
-        if (n == 0)
+        vector<ll> a;
+        for (ll i = 1; i <= n; i++)
         {
-            cout << 0;
-        }
-        else if (n == 1)
-            cout << 1;
-        else
-        {
-            ll a = 0;
-            ll b = 1;
-            ll c = 1;
-            for (ll i = 0; i <= n - 2; i++)
+            ll tmp;
+            cin >> tmp;
+            if (tmp > 0)
             {
-                a = a % k;
-                b = b % k;
-                c = a + b;
-                c = c % k;
-                a = b;
-                b = c;
+                a.push_back(tmp);
             }
-            cout << c;
+        }
+
+        int check = 0;
+
+        for (ll i = 1; i <= n; i++)
+        {
+            if (a[i] == 0)
+            {
+                check = 1;
+                cout << i;
+                break;
+            }
+        }
+
+        if (check == 0)
+        {
+            cout << n + 1;
         }
 
         cout << endl;

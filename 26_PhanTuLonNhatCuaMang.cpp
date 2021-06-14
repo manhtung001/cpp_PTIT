@@ -2,19 +2,23 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
 	int t;
 	cin >> t;
-	while (t--){
+	while (t--)
+	{
 		vector<int> v;
 		int n;
 		cin >> n;
-		for (int i = 0; i < n; i++){
+		long long max = -1;
+		for (int i = 0; i < n; i++)
+		{
 			long long a;
 			cin >> a;
-			v.push_back(a);
+			if (a > max)
+				max = a;
 		}
-		sort(v.begin(), v.end());
-		cout << v[n - 1] << endl;
+		cout << max << endl;
 	}
 }
