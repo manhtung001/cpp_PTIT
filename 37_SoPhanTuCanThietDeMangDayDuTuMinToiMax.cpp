@@ -8,7 +8,7 @@ int main(){
 	while (t--){
 		long n;
 		cin >> n;
-		int arr[100007];
+		int arr[100007];	// 1007 la sai
 		memset(arr, 0, sizeof(arr));
 		long max = INT_MIN, min = INT_MAX;
 		while (n--){
