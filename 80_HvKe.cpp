@@ -17,7 +17,7 @@ void HvKe(int a[], int n)
         if (i == 0)
             return; //Da o hoan vi cuoi cung;
         int k = n;
-        while (a[k] < a[i])
+        while (a[i] > a[k)
             k--;
         int tmp = a[i];
         a[i] = a[k];

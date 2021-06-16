@@ -29,4 +29,3 @@ int main()
 		check();
 	return 0;
 }
-
