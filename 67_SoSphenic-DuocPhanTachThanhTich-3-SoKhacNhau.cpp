@@ -10,13 +10,13 @@ bool find(long n)
 	}
 	long k = n;
 	long c = 0;
-	for (int index = 2; index < n; index++)
+	for (int i = 2; i < n; i++)
 	{
-		if (k % index == 0)
+		if (k % i == 0)
 		{
 			c++;
-			k /= index;
-			if (k % index == 0)
+			k /= i;
+			if (k % i == 0)
 			{
 				return false;
 			}

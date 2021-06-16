@@ -2,20 +2,25 @@
 
 using namespace std;
 
-char numToChar(int n){
+char numToChar(int n)
+{
 	return (char)(n + '0');
 }
 
-string findMax(int m, int s){
-	if (s == 0 || s > 9 * m){
+string findMax(int m, int s)
+{
+	if (s == 0 || s > 9 * m)
+	{
 		return "-1";
 	}
 	string res = "";
-	while (s > 9){
+	while (s > 9)
+	{
 		s -= 9;
 		res += "9";
 	}
-	if (s > 0){
+	if (s > 0)
+	{
 		res += numToChar(s);
 	}
 	int l = m - res.length();
@@ -23,36 +28,44 @@ string findMax(int m, int s){
 	return res;
 }
 
-string findMin(int m, int s){
-	if (s == 0 || s > 9 * m){
+string findMin(int m, int s)
+{
+	if (s == 0 || s > 9 * m)
+	{
 		return "-1";
 	}
 	string res = "";
-	while (s > 9){
+	while (s > 9)
+	{
 		s -= 9;
 		res += "9";
 	}
 	int l = m - res.length();
-	if (l == 1) {
+	if (l == 1) // neu do dai clai la 1
+	{
 		res.insert(0, 1, numToChar(s));
 		return res;
 	}
+	// neu do dai clai > 1
 	s -= 1;
-	res.insert(0, 1, '1');
-	if (s > 0){
-		res.insert(1, 1, numToChar(s));
+	res.insert(0, 1, '1'); // 199    1xx99
+	if (s > 0)
+	{
+		res.insert(1, 1, numToChar(s)); // 1399
 	}
-	l = m - res.length();
+	l = m - res.length(); // 10399
 	res.insert(1, l, '0');
 	return res;
 }
 
-int main (){
+int main()
+{
 	int m, s;
 	cin >> m >> s;
 	string sMax = findMax(m, s);
 	string sMin = findMin(m, s);
-	if (sMin == "-1" || sMax == "-1"){
+	if (sMin == "-1" || sMax == "-1")
+	{
 		cout << "-1 -1";
 		return 0;
 	}

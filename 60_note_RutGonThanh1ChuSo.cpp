@@ -3,23 +3,17 @@ using namespace std;
 
 long rutGon(long n)
 {
-
-	long sum = 0;
-
-	while (n > 0)
+	while (n >= 10)
 	{
-		sum += n % 10;
-		n /= 10;
+		long sum = 0;
+		while (n > 0)
+		{
+			sum += n % 10;
+			n /= 10;
+		}
+		n = sum;
 	}
-
-	// doan an tien
-
-	while (sum >= 10)
-	{
-		sum = rutGon(sum);
-	}
-
-	return sum;
+	return n;
 }
 main()
 {
