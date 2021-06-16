@@ -17,7 +17,7 @@ void ThKe(int a[], int n, int k)
 			return; //Da o to hop cuoi cung;
 		a[i] = a[i] + 1;
 		for (int j = i + 1; j <= k; j++)
-			a[j] = a[i] + 1;
+			a[j] = a[i] + j - i;
 	}
 }
 
