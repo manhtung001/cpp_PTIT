@@ -18,15 +18,15 @@ int main()
 			v.push_back(k);
 		}
 		sort(v.begin(), v.end());
-		long res = INT_MAX;
+		long minn = INT_MAX;
 		for (int i = 0; i < n - 1; i++)
 		{
 			long z = v[i + 1] - v[i];
-			if (z < res)
+			if (z < minn)
 			{
-				res = z;
+				minn = z;
 			}
 		}
-		cout << res << endl;
+		cout << minn << endl;
 	}
 }
