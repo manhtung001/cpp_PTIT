@@ -2,8 +2,6 @@
 
 using namespace std;
 
-bool a = true;
-
 int main()
 {
 	int t;

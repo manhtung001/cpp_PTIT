@@ -6,6 +6,7 @@ int slove(string a, string b)
 {
 	string ab = a.append(b);
 	string ba = b.append(a);
+	// if (ab > ba)
 	if (ab.compare(ba) > 0)
 		return 1;
 	return 0;
