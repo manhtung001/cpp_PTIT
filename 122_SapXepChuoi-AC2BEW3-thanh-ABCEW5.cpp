@@ -10,16 +10,19 @@ main()
 		string s1 = "";
 		cin >> s1;
 		int sum = 0;
+		string s2 = "";
 		for (int i = 0; i < s1.size(); i++)
 		{
 			if (s1[i] >= '0' && s1[i] <= '9')
 			{
 				sum += s1[i] - '0';
-				s1.erase(s1.begin() + i);
-				i--;
+			}
+			else
+			{
+				s2 += s1[i];
 			}
 		}
-		sort(s1.begin(), s1.end());
-		cout << s1 << sum << endl;
+		sort(s2.begin(), s2.end());
+		cout << s2 << sum << endl;
 	}
 }

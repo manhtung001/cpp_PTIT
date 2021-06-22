@@ -19,7 +19,7 @@ main()
 		}
 		if (s.size() % 2 == 0 && res <= s.size() / 2)
 			cout << "1" << endl;
-		else if (s.size() % 2 == 1 && res < (s.size() / 2 + 1))
+		else if (s.size() % 2 == 1 && res <= (s.size() / 2 + 1))
 			cout << "1" << endl;
 		else
 			cout << "0" << endl;

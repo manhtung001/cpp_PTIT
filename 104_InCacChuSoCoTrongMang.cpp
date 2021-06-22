@@ -2,11 +2,6 @@
 
 using namespace std;
 
-int charToNum(char c)
-{
-    return (int)c - (int)'0';
-}
-
 int main()
 {
     int t;
@@ -23,7 +18,7 @@ int main()
             cin >> s;
             for (int j = 0; j < s.length(); j++)
             {
-                int z = charToNum(s[j]);
+                int z = s[j] - '0';
                 arr[z] = 1;
             }
         }

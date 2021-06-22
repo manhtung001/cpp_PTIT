@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// code chua sub
+
 int main()
 {
     int t;
@@ -20,7 +22,8 @@ int main()
                 {
                     tmp = tmp * 10 + s[j] - '0';
                 }
-                cout << tmp << " ";
+                if (tmp % 3 == 0)
+                    res++;
             }
             id++;
         }

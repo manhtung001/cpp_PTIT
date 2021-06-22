@@ -24,8 +24,8 @@ main()
 
 				if (count == k)
 					dem++;
-				else if (count > k)
-					break;
+				// else if (count > k)  // cho vao de chay nhanh hon
+				// 	break;
 			}
 		}
 		cout << dem << endl;
