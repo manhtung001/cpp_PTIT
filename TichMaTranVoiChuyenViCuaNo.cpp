@@ -1,40 +1,38 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
+int a[100][100];
+int b[100][100];
+int c[100][100];
+int n,m;
 
 int main() {
-	ll t;
+	int t;
 	cin >> t;
-	ll dem = 1;
-	while(dem <= t) {
-		
-		ll n,m;
+	int dem = 0;
+	while(dem != t) {
 		cin >> n >> m;
-		ll a[n][m] = {0};
-		ll b[m][n] = {0};
-		ll c[n][n] = {0};
- 		for(ll i = 0; i < n; i++)
-  			for(ll j = 0; j < m; j++) {
+		memset(c, 0, sizeof(c));
+ 		for(int i = 0; i < n; i++)
+  			for(int j = 0; j < m; j++) {
   				cin >> a[i][j];
   				b[j][i] = a[i][j];
 			  }
-   		
-   		for(ll i = 0; i < n; i++) {
-  			for(ll j = 0; j < n; j++) {
-   				for(ll l = 0; l < m; l++) {
+		
+		for(int i = 0; i < n; i++) {
+  			for(int j = 0; j < n; j++) {
+   				for(int l = 0; l < m; l++) {
     				c[i][j] += a[i][l] * b[l][j];
    				}
   			}
  		}
+		 dem++;
+ 		cout<<"Test "<<dem<<":"<<endl;
  		
- 		cout<<"Test "<<dem <<":"<<endl;
- 		dem++;
- 		
- 		for(ll i = 0; i < n; i++) {
-  			for(ll j = 0; j < n; j++) {
+ 		for(int i = 0; i < n; i++) {
+  			for(int j = 0; j < n; j++) {
    				cout << c[i][j] << " ";
   			}
-  			cout << endl;
- 		}	
+  		cout << endl;
+ 		}		
 	}
 }
