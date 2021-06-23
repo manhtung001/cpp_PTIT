@@ -9,7 +9,8 @@ int main()
 	while (t--)
 	{
 		cin >> n;
-		map<int, int> d;
+		int d[1000005];
+		memset(d, 0, sizeof(d));
 		for (int i = 0; i < n; i++)
 		{
 			cin >> a[i];
@@ -18,7 +19,7 @@ int main()
 		}
 		for (int i = 1; i <= 1000000; i++)
 		{
-			if (!d[i])
+			if (d[i] == 0)
 			{
 				cout << i << endl;
 				break;

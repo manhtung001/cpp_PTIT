@@ -8,11 +8,9 @@ long long luythua(long a, long n)
 	if (n == 0)
 		return 1;
 	long long temp = luythua(a, n / 2);
-	temp *= temp;
-	temp %= 10;
 	if (n % 2 == 0)
-		return temp;
-	return (temp * a) % 10;
+		return temp * temp % 10;
+	return ((temp * temp % 10) * a) % 10;
 }
 
 main()
